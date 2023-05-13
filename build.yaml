@@ -1,0 +1,12 @@
+targets:
+  $default:
+    builders:
+      source_gen:combining_builder:
+        options:
+          build_extensions:
+            '^lib/src/model/{{}}.dart': 'lib/src/model/json_serializable_generator/{{}}.g.dart'
+      freezed|freezed:
+        enabled: true
+        options:
+          build_extensions:            
+            '^lib/src/model/{{}}.dart': 'lib/src/model/freezed/{{}}.freezed.dart'            
